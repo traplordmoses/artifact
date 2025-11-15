@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+ARtefact
 
-## Getting Started
+Every place has a story… share yours.
 
-First, run the development server:
+ARtefact is a location-bound AR messaging platform that turns public spaces into living layers of shared memories, notes, and discoveries. Using only a browser, users can drop time-limited, geo-anchored messages that others can uncover through their camera.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+What is ARtefact?
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ARtefact blends augmented reality, geolocation, and decentralized storage to let people leave digital artefacts in physical space. Messages become part of a place—waiting for someone to walk into the spot and reveal them.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+With ARtefact, the world becomes a canvas of stories.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+How It Works
+1. Create
 
-## Learn More
+Open the app in your browser (Next.js)
 
-To learn more about Next.js, take a look at the following resources:
+Use the AR camera view to place a marker in the real world
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Add your message: text, photo, audio, or short video
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Set how long it should last
 
-## Deploy on Vercel
+Publish it to the Arkiv Network for secure, tamper-proof storage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. Discover
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Explore the world with your camera open
+
+When you enter a tagged location, artefacts appear as AR markers
+
+Tap to reveal the story left behind
+
+Messages expire when their time runs out, leaving room for new ones
+
+3. Share
+
+Invite friends to explore hidden layers around you
+
+Create shared storytelling trails across cities
+
+Core Features
+
+AR geolocation messaging
+
+Camera-based exploration
+
+Time-limited story drops
+
+Decentralized storage via Arkiv Network
+
+No app install — browser-native
+
+Lightweight, expressive UX
+
+Use Cases
+
+Hidden notes between friends
+
+City exploration and local stories
+
+Interactive tours
+
+Artistic AR installations
+
+Memory trails and event routes
+
+Campus or festival storytelling
+
+Why?
+
+We believe places hold energy, memory, and meaning—and AR can bring that out. ARtefact lets communities speak through their environments, creating a living archive of stories woven into the world.
+
+Tagline
+Every place has a story… share yours.
