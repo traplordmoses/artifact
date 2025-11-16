@@ -27,6 +27,13 @@ Preferred communication style: Simple, everyday language.
 - Design system uses clamp() for responsive typography
 - Custom fonts: Instrument Serif for headings, Inter for body text
 
+**AR Camera Integration**: Snap Camera Kit Web SDK
+- Location: `/camera` page with client-side ARCamera component
+- SDK: `@snap/camera-kit` v1.12.0 for browser-based AR experiences
+- Features: WebGL2-based AR lens rendering, MediaStream camera access, real-time effects
+- Implementation: Client-only component with proper MediaStream and session cleanup
+- Rationale: Enables web-based AR discovery of location-bound notes without native app requirement
+
 ### Backend Architecture
 
 **API Route Structure**: Next.js API Routes (App Router)
@@ -103,6 +110,9 @@ NotePayload:
 - `POLKADOT_HUB_RPC`: Polkadot Hub RPC URL (defaults to testnet)
 - `POLKADOT_HUB_CHAIN_ID`: Chain ID (defaults to 420420422)
 - `POLKADOT_HUB_PRIVATE_KEY`: Separate key for Polkadot Hub transactions
+- `NEXT_PUBLIC_SNAP_CAMERA_KIT_API_TOKEN`: Snap Camera Kit API token (client-side)
+- `NEXT_PUBLIC_SNAP_LENS_ID`: Snap Lens ID for AR effects
+- `NEXT_PUBLIC_SNAP_LENS_GROUP_ID`: Snap Lens Group ID for lens repository access
 
 ### Security Considerations
 
@@ -134,6 +144,12 @@ NotePayload:
 - ScrollTrigger (GSAP plugin): Scroll-driven animations
 - Lenis v1.3.15: Smooth scrolling physics
 
+**AR/Camera Services**:
+- Snap Camera Kit Web SDK v1.12.0: Browser-based AR lens platform
+- Purpose: Real-time AR effects and lens rendering for web experiences
+- Requirements: WebGL2 support, camera permissions
+- Integration: Client-side only (NEXT_PUBLIC_ env vars)
+
 **Ethereum Tooling**:
 - viem v2.39.0: TypeScript EVM client (used for Polkadot Hub)
 - Provides account management, transaction signing, chain interactions
@@ -152,10 +168,20 @@ NotePayload:
   - Inter: Body text font
   - Geist Sans/Mono: System fonts from Vercel
 
+## Recent Changes
+
+**November 16, 2025**: 
+- Migrated from Vercel to Replit environment
+- Configured Next.js dev server to bind to 0.0.0.0:5000 for Replit compatibility
+- Added Replit-specific files to .gitignore
+- Integrated Snap Camera Kit Web SDK for AR camera experiences
+- Created `/camera` page with ARCamera client component
+- Implemented proper MediaStream and Camera Kit session cleanup on component unmount
+
 ### Future Integration Points
 
 Based on README features, the application is designed to support:
-- Camera-based AR discovery (browser WebRTC/MediaDevices API)
-- Geolocation services (browser Geolocation API)
+- ✅ Camera-based AR discovery (implemented via Snap Camera Kit)
+- Geolocation services (browser Geolocation API) - ready for integration
 - Media uploads (photos, audio, video) - infrastructure exists but not yet implemented
-- Snap Lens integration (source field indicates planned integration)
+- ✅ Snap Lens integration (implemented with configurable Lens ID/Group ID)

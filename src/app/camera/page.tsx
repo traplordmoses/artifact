@@ -1,10 +1,15 @@
-import { Metadata } from "next";
-import ARCamera from "./ARCamera";
+"use client";
 
-export const metadata: Metadata = {
-  title: "AR Camera | ARtefact",
-  description: "Experience augmented reality with location-based messaging",
-};
+import dynamic from "next/dynamic";
+
+const ARCamera = dynamic(() => import("./ARCamera"), {
+  ssr: false,
+  loading: () => (
+    <div className="min-h-screen bg-black flex items-center justify-center">
+      <div className="text-white text-lg">Loading AR Camera...</div>
+    </div>
+  ),
+});
 
 export default function CameraPage() {
   return (
