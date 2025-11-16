@@ -45,3 +45,10 @@ node_modules/
 .env.local
 .env.*.local
 
+# Replit
+.replit
+replit.nix
+.config/
+.cache/
+.upm/
+
