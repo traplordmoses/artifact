@@ -89,11 +89,17 @@ export default function ARCamera() {
       } catch (err) {
         console.error("Camera Kit initialization error:", err);
         if (mounted) {
-          setError(
-            err instanceof Error
-              ? err.message
-              : "Failed to initialize camera"
-          );
+          let errorMessage = "Failed to initialize camera";
+          
+          if (err instanceof Error) {
+            errorMessage = err.message;
+            
+            if (errorMessage.includes("LocationRenderObjectProvider")) {
+              errorMessage = "This lens requires location-based features that are not supported in web browsers. Please use a lens without Landmarkers or location AR features.";
+            }
+          }
+          
+          setError(errorMessage);
           setIsLoading(false);
         }
       }
