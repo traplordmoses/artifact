@@ -66,12 +66,20 @@ export default function ARCamera() {
 
         await session.setSource(source);
 
+        console.log("Loading lens group:", LENS_GROUP_ID);
+        await cameraKit.lensRepository.loadLensGroups([LENS_GROUP_ID!]);
+        
+        console.log("Loading lens:", LENS_ID);
         const lens = await cameraKit.lensRepository.loadLens(
           LENS_ID!,
           LENS_GROUP_ID!
         );
-
+        
+        console.log("Lens loaded successfully:", lens);
+        console.log("Applying lens to session...");
         await session.applyLens(lens);
+        
+        console.log("Starting session play...");
         await session.play();
 
         if (mounted) {
