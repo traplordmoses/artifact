@@ -21,7 +21,7 @@ export default function Navbar() {
        
           </div>
           <div className="navbar-buttons">
-            <a href="/camera" className="nav-button">AR Camera</a>
+            <a href="https://lens.snap.com/experience/e1fb1a5e-fadd-4735-96e2-c06c728479eb" target="_blank" rel="noopener noreferrer" className="nav-button">AR Camera</a>
             <a href="#" className="nav-button">docs</a>
             <a href="#" className="nav-button nav-button-primary">dapp</a>
           </div>
