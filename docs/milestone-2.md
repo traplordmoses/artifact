@@ -2,37 +2,16 @@
 
 ## Overview
 
-This document outlines the development approach for the next 6 weeks, focusing on polishing the existing foundation, adding core functionality, and preparing for initial market validation.
+This document outlines the development approach for the next 6 weeks, focusing on polishing the existing foundation, enhancing features, and preparing for initial market validation.
 
 **Timeline**: 6 weeks  
-**Focus**: Polish, core features, and initial market presence
+**Focus**: Feature enhancement, polish, testing, and initial market presence
+
+**Status**: Core functionality (AR camera, Arkiv integration, wallet connection) has been completed in the previous milestone.
 
 ---
 
-## Week 1-2: Core Functionality Foundation
-
-### AR Camera Integration
-- Implement WebXR/WebAR camera access
-- Basic marker placement system
-- Geolocation API integration for precise positioning
-- Initial AR marker rendering in 3D space
-
-### Arkiv Network Integration
-- Connect to Arkiv Network testnet
-- Implement message storage and retrieval
-- Basic encryption for private messages
-- Time-based expiration system
-
-### User Authentication
-- Wallet connection (Polkadot.js extension)
-- Basic user profile system
-- Message ownership and permissions
-
-**Deliverables**: Working AR camera, basic message creation, storage on Arkiv testnet
-
----
-
-## Week 3-4: Feature Enhancement & Polish
+## Week 1-2: Feature Enhancement & Polish
 
 ### Message System
 - Rich media support (images, audio, short videos)
@@ -56,7 +35,7 @@ This document outlines the development approach for the next 6 weeks, focusing o
 
 ---
 
-## Week 5: Testing & Quality Assurance
+## Week 3-4: Testing & Quality Assurance
 
 ### Testing
 - Unit tests for core functions
@@ -80,7 +59,7 @@ This document outlines the development approach for the next 6 weeks, focusing o
 
 ---
 
-## Week 6: Initial Marketing & Launch Prep
+## Week 5: Initial Marketing & Launch Prep
 
 ### Marketing Materials
 - Landing page optimization
@@ -184,21 +163,9 @@ This document outlines the development approach for the next 6 weeks, focusing o
 
 | Week | Focus Area | Key Deliverables |
 |------|-----------|------------------|
-| 1-2 | Core Functionality | AR camera, Arkiv integration, auth |
-| 3-4 | Feature Enhancement | Message system, UI polish, mobile |
-| 5 | Testing & QA | Testing, bug fixes, documentation |
-| 6 | Marketing & Launch | Marketing materials, community, beta prep |
+| 1-2 | Feature Enhancement | Message system, UI polish, mobile |
+| 3-4 | Testing & QA | Testing, bug fixes, documentation |
+| 5 | Marketing & Launch | Marketing materials, community, beta prep |
 
 ---
-
-## Notes
-
-- **Realistic scope**: Focus on core functionality first, polish later
-- **Iterative approach**: Weekly demos and feedback loops
-- **Community-driven**: Early user feedback shapes priorities
-- **Quality over speed**: Better to have fewer, polished features than many broken ones
-
----
-
-**Next Steps**: Begin Week 1-2 development cycle with AR camera integration and Arkiv Network connection.
 
