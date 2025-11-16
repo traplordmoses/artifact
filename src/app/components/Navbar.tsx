@@ -21,6 +21,7 @@ export default function Navbar() {
        
           </div>
           <div className="navbar-buttons">
+            <a href="/camera" className="nav-button">AR Camera</a>
             <a href="#" className="nav-button">docs</a>
             <a href="#" className="nav-button nav-button-primary">dapp</a>
           </div>

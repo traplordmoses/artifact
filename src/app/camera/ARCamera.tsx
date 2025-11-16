@@ -17,6 +17,7 @@ export default function ARCamera() {
   const [error, setError] = useState<string | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const sessionRef = useRef<any>(null);
+  const mediaStreamRef = useRef<MediaStream | null>(null);
 
   useEffect(() => {
     if (!SNAP_API_TOKEN || !LENS_ID || !LENS_GROUP_ID) {
@@ -56,6 +57,8 @@ export default function ARCamera() {
           },
         });
 
+        mediaStreamRef.current = stream;
+
         const source = createMediaStreamSource(stream, {
           transform: Transform2D.MirrorX,
           cameraType: "user",
@@ -92,8 +95,18 @@ export default function ARCamera() {
 
     return () => {
       mounted = false;
+      
+      if (mediaStreamRef.current) {
+        mediaStreamRef.current.getTracks().forEach((track) => {
+          track.stop();
+        });
+        mediaStreamRef.current = null;
+      }
+
       if (sessionRef.current) {
         sessionRef.current.pause?.();
+        sessionRef.current.destroy?.();
+        sessionRef.current = null;
       }
     };
   }, []);
