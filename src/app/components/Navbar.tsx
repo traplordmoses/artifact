@@ -1,12 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-content">
-        <div className="navbar-logo">
+        <Link href="/" className="navbar-logo">
           <Image
             src="/artefact_logo.svg"
             alt="ARtefact"
@@ -15,7 +16,7 @@ export default function Navbar() {
             priority
           />
           <span className="navbar-brand">artefact</span>
-        </div>
+        </Link>
         <div className="navbar-right">
           <div className="navbar-links">
        
@@ -23,11 +24,10 @@ export default function Navbar() {
           <div className="navbar-buttons">
             <a href="https://lens.snap.com/experience/e1fb1a5e-fadd-4735-96e2-c06c728479eb" target="_blank" rel="noopener noreferrer" className="nav-button">AR Camera</a>
             <a href="#" className="nav-button">docs</a>
-            <a href="#" className="nav-button nav-button-primary">dapp</a>
+            <Link href="/console" className="nav-button nav-button-primary">dapp</Link>
           </div>
         </div>
       </div>
     </nav>
   );
 }
-

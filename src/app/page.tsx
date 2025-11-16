@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -11,14 +11,13 @@ export default function Home() {
   const spotlightRef = useRef<HTMLDivElement>(null);
   const spotlightImagesRef = useRef<HTMLDivElement[]>([]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
     const lenis = new Lenis();
     lenis.on("scroll", ScrollTrigger.update);
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
+    const lenisRaf = (time: number) => lenis.raf(time * 1000);
+    gsap.ticker.add(lenisRaf);
     gsap.ticker.lagSmoothing(0);
 
     const spotlightImgFinalPos = [
@@ -115,6 +114,7 @@ export default function Home() {
 
     return () => {
       scrollTrigger.kill();
+      gsap.ticker.remove(lenisRaf);
       lenis.destroy();
     };
   }, []);

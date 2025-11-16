@@ -1060,3 +1060,258 @@ p {
   }
 }
 
+/* Console Page */
+
+.console-section {
+  background-color: #edf1e8;
+  min-height: 100svh;
+  padding: 6rem 1.5rem 4rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.console-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.console-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.console-header h1 {
+  width: auto;
+  margin: 0;
+  text-align: left;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+}
+
+.console-subtitle {
+  font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+  opacity: 0.7;
+  max-width: 480px;
+}
+
+.console-wallet {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.console-wallet-meta {
+  font-size: 0.75rem;
+  color: #141414;
+  opacity: 0.7;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main grid */
+
+.console-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 2rem;
+}
+
+.console-card {
+  padding: 1.75rem 1.75rem 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 1rem;
+  border: 1px solid rgba(20, 20, 20, 0.08);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.console-field-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.console-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.console-field label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.console-input,
+.console-textarea {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(20, 20, 20, 0.12);
+  padding: 0.6rem 0.75rem;
+  font-size: 0.9rem;
+  font-family: "Inter", sans-serif;
+  background-color: rgba(255, 255, 255, 0.95);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.console-input:focus,
+.console-textarea:focus {
+  border-color: rgba(20, 20, 20, 0.35);
+  box-shadow: 0 0 0 1px rgba(20, 20, 20, 0.2);
+}
+
+.console-textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.console-meta {
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+/* Tier controls */
+
+.console-tier-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.console-tier-option {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.console-tier-option input {
+  margin-top: 0.15rem;
+}
+
+.console-tier-option span strong {
+  font-weight: 600;
+}
+
+/* Submit + errors */
+
+.console-error {
+  font-size: 0.8rem;
+  color: #b91c1c;
+  background-color: rgba(185, 28, 28, 0.06);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(185, 28, 28, 0.3);
+  padding: 0.5rem 0.75rem;
+}
+
+.console-submit {
+  margin-top: 0.5rem;
+  width: 100%;
+  border: none;
+  border-radius: 0.6rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: lowercase;
+  background-color: #141414;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.console-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.console-submit:not(:disabled):hover {
+  background-color: rgba(20, 20, 20, 0.9);
+  transform: translateY(-1px);
+}
+
+/* Right column */
+
+.console-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.console-result-card {
+  padding: 1rem 1.25rem;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(20, 20, 20, 0.1);
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 0.85rem;
+}
+
+.console-result-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.console-result-card p {
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.console-result-relic {
+  border-color: rgba(180, 83, 9, 0.6);
+  background-color: rgba(255, 237, 213, 0.7);
+}
+
+.console-payload {
+  word-break: break-all;
+}
+
+.console-guide {
+  padding: 1rem 1.25rem;
+  border-radius: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px dashed rgba(20, 20, 20, 0.15);
+  font-size: 0.85rem;
+}
+
+.console-guide h3 {
+  margin-bottom: 0.5rem;
+}
+
+.console-guide ol {
+  padding-left: 1.25rem;
+}
+
+.console-guide li {
+  margin-bottom: 0.3rem;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .console-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .console-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .console-wallet {
+    align-items: flex-start;
+  }
+
+  .console-section {
+    padding-top: 5rem;
+  }
+}
+
